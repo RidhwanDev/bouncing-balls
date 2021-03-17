@@ -3,6 +3,7 @@
   width: fit-content;
 }
 canvas {
+  background-color: #c5dede;
   display: block;
   border: 3px solid;
 }

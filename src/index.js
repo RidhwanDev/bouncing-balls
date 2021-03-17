@@ -1,11 +1,6 @@
-import _ from 'lodash';
 import './style.css';
  
 const canvas = document.createElement('canvas');
-var ctx = canvas.getContext("2d")
-const canvasHeight = canvas.height + 2.5;
-const ballRadius = 10;
-const balls = [];
 
 function mainComponent() {
     const element = document.createElement('div');
@@ -26,6 +21,13 @@ function mainComponent() {
 
     return element;
 }
+
+document.body.appendChild(mainComponent());
+
+var ctx = canvas.getContext("2d")
+const canvasHeight = canvas.height + 2.5;
+const ballRadius = 10;
+const balls = [];
 
 function getCursorPosition(canvas, event) {
     const rect = canvas.getBoundingClientRect()
@@ -90,5 +92,4 @@ function draw() {
     }
 }
   
-document.body.appendChild(mainComponent());
 setInterval(draw, 10);
